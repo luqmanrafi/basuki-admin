@@ -1,0 +1,147 @@
+/* Admin Dashboard CSS - High Quality */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+    --sidebar-width: 260px;
+    --top-nav-height: 70px;
+    --primary-accent: #1d4ed8;
+    --body-bg: #f3f4f6; /* Lighter grey */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--body-bg);
+    color: #111827;
+}
+
+.sidebar {
+    width: var(--sidebar-width);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    border-right: 1px solid #e5e7eb;
+    padding: 1.5rem;
+    z-index: 1000;
+}
+
+.sidebar .sidebar-header {
+    color: var(--primary-accent);
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.sidebar .nav-link {
+    color: #374151;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.8rem 1rem;
+    display: flex;
+    align-items: center;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar .nav-link i {
+    margin-right: 12px;
+    font-size: 1.2rem;
+    width: 20px;
+    text-align: center;
+    color: #6b7280;
+    transition: color 0.2s;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #f3f4f6;
+}
+
+.sidebar .nav-link.active {
+    background-color: #dbeafe;
+    color: var(--primary-accent);
+}
+
+.sidebar .nav-link.active i {
+    color: var(--primary-accent);
+}
+
+.main-wrapper {
+    margin-left: var(--sidebar-width);
+}
+
+.top-navbar {
+    height: var(--top-nav-height);
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content-area {
+    padding: 2rem;
+}
+
+.stat-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.stat-card .card-icon {
+    font-size: 1.8rem;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-right: 1.5rem;
+}
+
+.stat-card .card-icon.icon-1 { background-color: #dbeafe; color: #3b82f6; }
+.stat-card .card-icon.icon-2 { background-color: #d1fae5; color: #10b981; }
+.stat-card .card-icon.icon-3 { background-color: #ffedd5; color: #f97316; }
+.stat-card .card-icon.icon-4 { background-color: #e0e7ff; color: #6366f1; }
+
+.stat-card h5 {
+    color: #6b7280;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.stat-card .stat-number {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.chart-container, .table-container {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+}
+
+.table {
+    color: #374151;
+}
+
+.table thead th {
+    color: #6b7280;
+    font-weight: 600;
+    border-bottom: 2px solid #e5e7eb;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.table tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+.table td, .table th {
+    border-top: 1px solid #f3f4f6;
+    vertical-align: middle;
+}
