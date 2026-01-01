@@ -31,6 +31,7 @@ class DashboardController extends BaseController
             'totalMitra'  => $totalMitra,
             'totalUsers'  => $totalUsers,
             // 'activeMitra' => $activeMitra,
+            'recentMitra' => $mitraModel->getRecentMitra(5),
             'chartLabels' => json_encode($chartLabels),
             'chartData'   => json_encode($chartData),
         ];

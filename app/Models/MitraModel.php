@@ -52,4 +52,9 @@ class MitraModel extends Model
             ->orderBy('MONTH(created_at)', 'ASC')
             ->findAll();
     }
+
+    public function getRecentMitra(int $limit = 5)
+    {
+        return $this->orderBy('created_at', 'DESC')->findAll($limit);
+    }
 }

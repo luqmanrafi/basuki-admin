@@ -19,11 +19,16 @@ $routes->post('/register', 'AuthController::attemptRegister');
 $routes->get('/logout', 'AuthController::logout');
 $routes->post('/api/mitra', 'MitraController::createApi');
 
-$routes->get('/admin/dashboard', 'AdminController::index', ['filter' => 'auth']);
-$routes->resource('admin/mitra', ['controller' =>'MitraController', 'filter' => 'auth']);
+$routes->get('/admin/dashboard', 'DashboardController::index', ['filter' => 'auth']);
+$routes->get('/admin/mitra/export_pdf', 'MitraController::exportPdf', ['filter' => 'auth']);
+$routes->get('/admin/mitra/export_docx', 'MitraController::exportDocx', ['filter' => 'auth']);
+$routes->resource('admin/mitra', ['controller' => 'MitraController', 'filter' => 'auth']);
+
 
 $routes->group('', ['filter' => 'auth'], static function ($routes) {
-    $routes->get('/dashboard', function() {
+    $routes->get('/dashboard', function () {
         return redirect()->to('/admin/dashboard');
     });
 });
+
+$routes->post('/admin/mitra/proses_import', 'MitraController::importProcess', ['filter' => 'auth']);
